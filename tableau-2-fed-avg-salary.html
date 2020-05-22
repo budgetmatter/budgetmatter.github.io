@@ -15,7 +15,12 @@
 
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
-
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <style>
+    body {
+        font-family: 'Roboto';font-size: 16px;
+    }
+    </style>
 </head>
 
 <body>
@@ -95,28 +100,44 @@
   </nav>
 
   <header>
-    <div class="carousel-inner" role="listbox">
-       <div class="carousel-item active">
-         <div class="carousel-caption d-none d-md-block">
-              <div class="scene">
-                <div class="wrap">
-                    <div class="wall wall-right"></div>
-                    <div class="wall wall-left"></div>   
-                    <div class="wall wall-top"></div>
-                    <div class="wall wall-bottom"></div> 
-                    <div class="wall wall-back"></div>    
-                </div>
-                <div class="wrap">
-                    <div class="wall wall-right"></div>
-                    <div class="wall wall-left"></div>   
-                    <div class="wall wall-top"></div>
-                    <div class="wall wall-bottom"></div>   
-                    <div class="wall wall-back"></div>    
-                </div>
-              </div>
-             </div>
-         </div>
-       </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url('https://www.crfb.org/sites/default/files/styles/content_hero_fullsize/public/default_images/shutterstock_316727396.jpg?itok=2QivphVy&timestamp=1462293681')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3><a href="process.html">Budget Process</a></h3>
+            <p>How governments create and approve a budget</p>
+          </div>
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('https://www.crfb.org/sites/default/files/styles/content_hero_fullsize/public/shutterstock_131100503_0.jpg?itok=RPlBsAIr&timestamp=1464204008')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3><a href="policy.html">Budget Laws</a></h3>
+            <p>Information pertaining to budget and finance policy</p>
+          </div>
+        </div>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('https://www.crfb.org/sites/default/files/styles/content_hero_fullsize/public/shutterstock_349461494.jpg?itok=CGY6-Qvw&timestamp=1469466145')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3><a href="portfolio-1-col.html">Projects, Ananlysis, and Tools</a></h3>
+            <p>Real-World Problem Solving and Innovation</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
   </header>
   
 
@@ -124,15 +145,15 @@
   <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">Full Width
-      <small>Subheading</small>
+    <h1 class="mt-4 mb-3">Feds Salary 
+      <!-- <small>Subheading</small> -->
     </h1>
 
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
         <a href="index.html">Home</a>
       </li>
-      <li class="breadcrumb-item active">Full Width</li>
+      <li class="breadcrumb-item active">Feds Salary</li>
     </ol>
     <div class='tableauPlaceholder' id='viz1588774949194' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;La&#47;Labor-Fed-092018&#47;DB&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Labor-Fed-092018&#47;DB' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;La&#47;Labor-Fed-092018&#47;DB&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1588774949194');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1024px';vizElement.style.height='795px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
   </div>
