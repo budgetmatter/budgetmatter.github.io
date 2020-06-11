@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="../img/favicon.png" />
+  <title>Budget Matter | How Federal Budget Works</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../css/modern-business.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <style>
+    body {
+      font-family: 'Roboto';
+      font-size: 16px;
+    }
+  </style>
+
+  <!-- Leaflet CSS & JS-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+
+  <!-- d3 JavaScript -->
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+
+  <!-- Leaflet-Choropleth JavaScript -->
+  <script type="text/javascript" src="static/js/choropleth.js"></script>
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a href="../index.html">
+        <img src="../img/logox.6.3.PNG" alt="">
+        <h6>How Federal Budget Works</h6>
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../process.html">Budget Process</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../policy.html">Budget Law</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../portfolio-1-col.html">Portfolio</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active"
+          style="background-image: url('https://www.crfb.org/sites/default/files/styles/content_hero_fullsize/public/default_images/shutterstock_316727396.jpg?itok=2QivphVy&timestamp=1462293681')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3><a href="../process.html">Budget Process</a></h3>
+            <p>How governments create and approve a budget</p>
+          </div>
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item"
+          style="background-image: url('https://www.crfb.org/sites/default/files/styles/content_hero_fullsize/public/shutterstock_131100503_0.jpg?itok=RPlBsAIr&timestamp=1464204008')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3><a href="../policy.html">Budget Laws</a></h3>
+            <p>Information pertaining to budget and finance policy</p>
+          </div>
+        </div>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <div class="carousel-item"
+          style="background-image: url('https://www.crfb.org/sites/default/files/styles/content_hero_fullsize/public/shutterstock_349461494.jpg?itok=CGY6-Qvw&timestamp=1469466145')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3><a href="../portfolio-1-col.html">Projects, Ananlysis, and Tools</a></h3>
+            <p>Real-World Problem Solving and Innovation</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </header>
+
+
+  <!-- Page Content -->
+  <div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Python Data Mining, JS D3, and Leaflet GeoMap</h1>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="../portfolio-1-col.html">Portfolio</a>
+      </li>
+      <li class="breadcrumb-item active">Python, D3, Leaflet</li>
+    </ol>
+    <p style="font-size:larger;"> </p>
+    <ul class="list-group">
+      <li class="list-group-item">.</li>
+    </ul>
+    <br>
+    <!-- Page Heading/Breadcrumbs -->
+
+    <div id="map" style="height: 650px; position: relative; outline: none;"
+      class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+      tabindex="0">
+      <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(90px, 0px, 0px);">
+        <div class="leaflet-pane leaflet-tile-pane">
+          <div class="leaflet-layer " style="z-index: 1; opacity: 1;">
+            <div class="leaflet-tile-container leaflet-zoom-animated"
+              style="z-index: 18; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/8/4.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(172px, 164px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/9/4.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(428px, 164px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/8/3.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(172px, -92px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/9/3.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(428px, -92px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/8/5.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(172px, 420px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/9/5.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(428px, 420px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/7/4.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(-84px, 164px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/10/4.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(684px, 164px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/7/3.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(-84px, -92px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/10/3.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(684px, -92px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/7/5.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(-84px, 420px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/10/5.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(684px, 420px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/6/4.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(-340px, 164px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/11/4.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(940px, 164px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/6/3.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(-340px, -92px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/11/3.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(940px, -92px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/6/5.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(-340px, 420px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/11/5.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(940px, 420px, 0px); opacity: 1;">
+            </div>
+          </div>
+          <div class="leaflet-layer " style="z-index: 1; opacity: 1;">
+            <div class="leaflet-tile-container leaflet-zoom-animated"
+              style="z-index: 18; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/8/4.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(172px, 164px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/9/4.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(428px, 164px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/8/3.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(172px, -92px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/9/3.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(428px, -92px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/8/5.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(172px, 420px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/9/5.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(428px, 420px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/7/4.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(-84px, 164px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/10/4.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(684px, 164px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/7/3.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(-84px, -92px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/10/3.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(684px, -92px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/7/5.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(-84px, 420px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/10/5.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(684px, 420px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/6/4.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(-340px, 164px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/11/4.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(940px, 164px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/6/3.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(-340px, -92px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/11/3.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(940px, -92px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/6/5.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(-340px, 420px, 0px); opacity: 1;"><img alt=""
+                role="presentation"
+                src="https://api.tiles.mapbox.com/v4/mapbox.light/4/11/5.png?access_token=pk.eyJ1Ijoicm9iZWx3b24iLCJhIjoiY2s1aGU5Mzc2MDJ4NDNkcDdxMng2ajA4YSJ9.Ojwn4foHr3H5Y1G8iui6cA"
+                class="leaflet-tile leaflet-tile-loaded"
+                style="width: 256px; height: 256px; transform: translate3d(940px, 420px, 0px); opacity: 1;">
+            </div>
+          </div>
+        </div>
+        <div class="leaflet-pane leaflet-shadow-pane"><img
+            src="https://unpkg.com/leaflet@1.3.3/dist/images/marker-shadow.png"
+            class="leaflet-marker-shadow leaflet-zoom-animated" alt=""
+            style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(456px, 325px, 0px);"><img
+            src="https://unpkg.com/leaflet@1.3.3/dist/images/marker-shadow.png"
+            class="leaflet-marker-shadow leaflet-zoom-animated" alt=""
+            style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(280px, 410px, 0px);"><img
+            src="https://unpkg.com/leaflet@1.3.3/dist/images/marker-shadow.png"
+            class="leaflet-marker-shadow leaflet-zoom-animated" alt=""
+            style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(268px, 319px, 0px);"><img
+            src="https://unpkg.com/leaflet@1.3.3/dist/images/marker-shadow.png"
+            class="leaflet-marker-shadow leaflet-zoom-animated" alt=""
+            style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(-44px, 207px, 0px);"><img
+            src="https://unpkg.com/leaflet@1.3.3/dist/images/marker-shadow.png"
+            class="leaflet-marker-shadow leaflet-zoom-animated" alt=""
+            style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(232px, 491px, 0px);"><img
+            src="https://unpkg.com/leaflet@1.3.3/dist/images/marker-shadow.png"
+            class="leaflet-marker-shadow leaflet-zoom-animated" alt=""
+            style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(266px, 584px, 0px);"><img
+            src="https://unpkg.com/leaflet@1.3.3/dist/images/marker-shadow.png"
+            class="leaflet-marker-shadow leaflet-zoom-animated" alt=""
+            style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(384px, 327px, 0px);"><img
+            src="https://unpkg.com/leaflet@1.3.3/dist/images/marker-shadow.png"
+            class="leaflet-marker-shadow leaflet-zoom-animated" alt=""
+            style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(2160px, 1640px, 0px);"><img
+            src="https://unpkg.com/leaflet@1.3.3/dist/images/marker-shadow.png"
+            class="leaflet-marker-shadow leaflet-zoom-animated" alt=""
+            style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(-1038px, 413px, 0px);"><img
+            src="https://unpkg.com/leaflet@1.3.3/dist/images/marker-shadow.png"
+            class="leaflet-marker-shadow leaflet-zoom-animated" alt=""
+            style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(338px, 572px, 0px);">
+        </div>
+        <div class="leaflet-pane leaflet-overlay-pane"></div>
+        <div class="leaflet-pane leaflet-marker-pane"><img
+            src="https://unpkg.com/leaflet@1.3.3/dist/images/marker-icon.png"
+            class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0"
+            style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(456px, 325px, 0px); z-index: 325;"><img
+            src="https://unpkg.com/leaflet@1.3.3/dist/images/marker-icon.png"
+            class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0"
+            style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(280px, 410px, 0px); z-index: 410;"><img
+            src="https://unpkg.com/leaflet@1.3.3/dist/images/marker-icon.png"
+            class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0"
+            style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(268px, 319px, 0px); z-index: 319;"><img
+            src="https://unpkg.com/leaflet@1.3.3/dist/images/marker-icon.png"
+            class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0"
+            style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(-44px, 207px, 0px); z-index: 207;"><img
+            src="https://unpkg.com/leaflet@1.3.3/dist/images/marker-icon.png"
+            class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0"
+            style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(232px, 491px, 0px); z-index: 491;"><img
+            src="https://unpkg.com/leaflet@1.3.3/dist/images/marker-icon.png"
+            class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0"
+            style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(266px, 584px, 0px); z-index: 584;"><img
+            src="https://unpkg.com/leaflet@1.3.3/dist/images/marker-icon.png"
+            class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0"
+            style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(384px, 327px, 0px); z-index: 327;"><img
+            src="https://unpkg.com/leaflet@1.3.3/dist/images/marker-icon.png"
+            class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0"
+            style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(2160px, 1640px, 0px); z-index: 1640;"><img
+            src="https://unpkg.com/leaflet@1.3.3/dist/images/marker-icon.png"
+            class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0"
+            style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(-1038px, 413px, 0px); z-index: 413;"><img
+            src="https://unpkg.com/leaflet@1.3.3/dist/images/marker-icon.png"
+            class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0"
+            style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(338px, 572px, 0px); z-index: 572;">
+        </div>
+        <div class="leaflet-pane leaflet-tooltip-pane"></div>
+        <div class="leaflet-pane leaflet-popup-pane"></div>
+        <div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(2332px, 1185px, 0px) scale(8);">
+        </div>
+      </div>
+      <div class="leaflet-control-container">
+        <div class="leaflet-top leaflet-left">
+          <div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="#"
+              title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out" href="#"
+              title="Zoom out" role="button" aria-label="Zoom out">−</a></div>
+        </div>
+        <div class="leaflet-top leaflet-right"></div>
+        <div class="leaflet-bottom leaflet-left"></div>
+        <div class="leaflet-bottom leaflet-right">
+          <div class="leaflet-control-attribution leaflet-control"><a href="http://leafletjs.com"
+              title="A JS library for interactive maps">Leaflet</a> | Map data © <a
+              href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a
+              href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a
+              href="https://www.mapbox.com/">Mapbox</a></div>
+        </div>
+      </div>
+    </div>
+    <br> <br>
+
+    <h3 class="mt-4 mb-3">Python Data Mining </h3>
+    <h5 class="mt-4 mb-3">Adding Geographic Informaiton in geojson file and happiness score in CSV file.</h5>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <div tabindex="-1" id="notebook" class="border-box-sizing">
+          <div class="container" id="notebook-container">
+
+            <div class="cell border-box-sizing code_cell rendered">
+              <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[13]:</div>
+                <div class="inner_cell">
+                  <div class="input_area">
+                    <div class=" highlight hl-ipython3">
+                      <pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+      <span class="kn">import</span> <span class="nn">geojson</span>
+      <span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+      <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+      </pre>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="cell border-box-sizing code_cell rendered">
+              <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[14]:</div>
+                <div class="inner_cell">
+                  <div class="input_area">
+                    <div class=" highlight hl-ipython3">
+                      <pre><span></span><span class="n">worldgeojson</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;FeatureCollection&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[]</span>
+      <span class="p">}</span>
+      </pre>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="cell border-box-sizing code_cell rendered">
+              <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[21]:</div>
+                <div class="inner_cell">
+                  <div class="input_area">
+                    <div class=" highlight hl-ipython3">
+                      <pre><span></span><span class="n">happy</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;map_2019.csv&quot;</span><span class="p">)</span>
+      <span class="n">happiness</span> <span class="o">=</span> <span class="n">happy</span><span class="o">.</span><span class="n">round</span><span class="p">({</span><span class="s1">&#39;happiness_score&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;gdp_per_capita&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;social_support&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;life_expectancy&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;freedom&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> 
+                      <span class="s1">&#39;generosity&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;government_corr&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
+      <span class="n">happiness</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+      </pre>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="output_wrapper">
+                <div class="output">
+
+
+                  <div class="output_area">
+
+                    <div class="prompt"></div>
+
+
+                    <div class="output_subarea output_stream output_stdout output_text">
+                      <pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+      RangeIndex: 156 entries, 0 to 155
+      Data columns (total 9 columns):
+      country            156 non-null object
+      happiness_rank     156 non-null int64
+      happiness_score    156 non-null float64
+      gdp_per_capita     156 non-null float64
+      social_support     156 non-null float64
+      life_expectancy    156 non-null float64
+      freedom            156 non-null float64
+      generosity         156 non-null float64
+      government_corr    156 non-null float64
+      dtypes: float64(7), int64(1), object(1)
+      memory usage: 11.1+ KB
+      </pre>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="cell border-box-sizing code_cell rendered">
+              <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[23]:</div>
+                <div class="inner_cell">
+                  <div class="input_area">
+                    <div class=" highlight hl-ipython3">
+                      <pre><span></span><span class="n">happiness</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+      </pre>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="output_wrapper">
+                <div class="output">
+
+
+                  <div class="output_area">
+
+                    <div class="prompt output_prompt">Out[23]:</div>
+
+
+
+                    <div class="output_html rendered_html output_subarea output_execute_result">
+                      <div>
+                        <style scoped>
+                          .dataframe tbody tr th:only-of-type {
+                            vertical-align: middle;
+                          }
+
+                          .dataframe tbody tr th {
+                            vertical-align: top;
+                          }
+
+                          .dataframe thead th {
+                            text-align: right;
+                          }
+                        </style>
+                        <table border="1" class="dataframe">
+                          <thead>
+                            <tr style="text-align: right;">
+                              <th></th>
+                              <th>country</th>
+                              <th>happiness_rank</th>
+                              <th>happiness_score</th>
+                              <th>gdp_per_capita</th>
+                              <th>social_support</th>
+                              <th>life_expectancy</th>
+                              <th>freedom</th>
+                              <th>generosity</th>
+                              <th>government_corr</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th>0</th>
+                              <td>Finland</td>
+                              <td>1</td>
+                              <td>7.77</td>
+                              <td>1.34</td>
+                              <td>1.59</td>
+                              <td>0.99</td>
+                              <td>0.60</td>
+                              <td>0.15</td>
+                              <td>0.39</td>
+                            </tr>
+                            <tr>
+                              <th>1</th>
+                              <td>Denmark</td>
+                              <td>2</td>
+                              <td>7.60</td>
+                              <td>1.38</td>
+                              <td>1.57</td>
+                              <td>1.00</td>
+                              <td>0.59</td>
+                              <td>0.25</td>
+                              <td>0.41</td>
+                            </tr>
+                            <tr>
+                              <th>2</th>
+                              <td>Norway</td>
+                              <td>3</td>
+                              <td>7.55</td>
+                              <td>1.49</td>
+                              <td>1.58</td>
+                              <td>1.03</td>
+                              <td>0.60</td>
+                              <td>0.27</td>
+                              <td>0.34</td>
+                            </tr>
+                            <tr>
+                              <th>3</th>
+                              <td>Iceland</td>
+                              <td>4</td>
+                              <td>7.49</td>
+                              <td>1.38</td>
+                              <td>1.62</td>
+                              <td>1.03</td>
+                              <td>0.59</td>
+                              <td>0.35</td>
+                              <td>0.12</td>
+                            </tr>
+                            <tr>
+                              <th>4</th>
+                              <td>Netherlands</td>
+                              <td>5</td>
+                              <td>7.49</td>
+                              <td>1.40</td>
+                              <td>1.52</td>
+                              <td>1.00</td>
+                              <td>0.56</td>
+                              <td>0.32</td>
+                              <td>0.30</td>
+                            </tr>
+                            <tr>
+                              <th>5</th>
+                              <td>Switzerland</td>
+                              <td>6</td>
+                              <td>7.48</td>
+                              <td>1.45</td>
+                              <td>1.53</td>
+                              <td>1.05</td>
+                              <td>0.57</td>
+                              <td>0.26</td>
+                              <td>0.34</td>
+                            </tr>
+                            <tr>
+                              <th>6</th>
+                              <td>Sweden</td>
+                              <td>7</td>
+                              <td>7.34</td>
+                              <td>1.39</td>
+                              <td>1.49</td>
+                              <td>1.01</td>
+                              <td>0.57</td>
+                              <td>0.27</td>
+                              <td>0.37</td>
+                            </tr>
+                            <tr>
+                              <th>7</th>
+                              <td>New Zealand</td>
+                              <td>8</td>
+                              <td>7.31</td>
+                              <td>1.30</td>
+                              <td>1.56</td>
+                              <td>1.03</td>
+                              <td>0.58</td>
+                              <td>0.33</td>
+                              <td>0.38</td>
+                            </tr>
+                            <tr>
+                              <th>8</th>
+                              <td>Canada</td>
+                              <td>9</td>
+                              <td>7.28</td>
+                              <td>1.36</td>
+                              <td>1.50</td>
+                              <td>1.04</td>
+                              <td>0.58</td>
+                              <td>0.28</td>
+                              <td>0.31</td>
+                            </tr>
+                            <tr>
+                              <th>9</th>
+                              <td>Austria</td>
+                              <td>10</td>
+                              <td>7.25</td>
+                              <td>1.38</td>
+                              <td>1.48</td>
+                              <td>1.02</td>
+                              <td>0.53</td>
+                              <td>0.24</td>
+                              <td>0.23</td>
+                            </tr>
+                            <tr>
+                              <th>10</th>
+                              <td>Australia</td>
+                              <td>11</td>
+                              <td>7.23</td>
+                              <td>1.37</td>
+                              <td>1.55</td>
+                              <td>1.04</td>
+                              <td>0.56</td>
+                              <td>0.33</td>
+                              <td>0.29</td>
+                            </tr>
+                            <tr>
+                              <th>11</th>
+                              <td>Costa Rica</td>
+                              <td>12</td>
+                              <td>7.17</td>
+                              <td>1.03</td>
+                              <td>1.44</td>
+                              <td>0.96</td>
+                              <td>0.56</td>
+                              <td>0.14</td>
+                              <td>0.09</td>
+                            </tr>
+                            <tr>
+                              <th>12</th>
+                              <td>Israel</td>
+                              <td>13</td>
+                              <td>7.14</td>
+                              <td>1.28</td>
+                              <td>1.46</td>
+                              <td>1.03</td>
+                              <td>0.37</td>
+                              <td>0.26</td>
+                              <td>0.08</td>
+                            </tr>
+                            <tr>
+                              <th>13</th>
+                              <td>Luxembourg</td>
+                              <td>14</td>
+                              <td>7.09</td>
+                              <td>1.61</td>
+                              <td>1.48</td>
+                              <td>1.01</td>
+                              <td>0.53</td>
+                              <td>0.19</td>
+                              <td>0.32</td>
+                            </tr>
+                            <tr>
+                              <th>14</th>
+                              <td>United Kingdom</td>
+                              <td>15</td>
+                              <td>7.05</td>
+                              <td>1.33</td>
+                              <td>1.54</td>
+                              <td>1.00</td>
+                              <td>0.45</td>
+                              <td>0.35</td>
+                              <td>0.28</td>
+                            </tr>
+                            <tr>
+                              <th>15</th>
+                              <td>Ireland</td>
+                              <td>16</td>
+                              <td>7.02</td>
+                              <td>1.50</td>
+                              <td>1.55</td>
+                              <td>1.00</td>
+                              <td>0.52</td>
+                              <td>0.30</td>
+                              <td>0.31</td>
+                            </tr>
+                            <tr>
+                              <th>16</th>
+                              <td>Germany</td>
+                              <td>17</td>
+                              <td>6.98</td>
+                              <td>1.37</td>
+                              <td>1.45</td>
+                              <td>0.99</td>
+                              <td>0.50</td>
+                              <td>0.26</td>
+                              <td>0.26</td>
+                            </tr>
+                            <tr>
+                              <th>17</th>
+                              <td>Belgium</td>
+                              <td>18</td>
+                              <td>6.92</td>
+                              <td>1.36</td>
+                              <td>1.50</td>
+                              <td>0.99</td>
+                              <td>0.47</td>
+                              <td>0.16</td>
+                              <td>0.21</td>
+                            </tr>
+                            <tr>
+                              <th>18</th>
+                              <td>United States of America</td>
+                              <td>19</td>
+                              <td>6.89</td>
+                              <td>1.43</td>
+                              <td>1.46</td>
+                              <td>0.87</td>
+                              <td>0.45</td>
+                              <td>0.28</td>
+                              <td>0.13</td>
+                            </tr>
+                            <tr>
+                              <th>19</th>
+                              <td>Czech Republic</td>
+                              <td>20</td>
+                              <td>6.85</td>
+                              <td>1.27</td>
+                              <td>1.49</td>
+                              <td>0.92</td>
+                              <td>0.46</td>
+                              <td>0.05</td>
+                              <td>0.04</td>
+                            </tr>
+                            <tr>
+                              <th>20</th>
+                              <td>United Arab Emirates</td>
+                              <td>21</td>
+                              <td>6.82</td>
+                              <td>1.50</td>
+                              <td>1.31</td>
+                              <td>0.82</td>
+                              <td>0.60</td>
+                              <td>0.26</td>
+                              <td>0.18</td>
+                            </tr>
+                            <tr>
+                              <th>21</th>
+                              <td>Malta</td>
+                              <td>22</td>
+                              <td>6.73</td>
+                              <td>1.30</td>
+                              <td>1.52</td>
+                              <td>1.00</td>
+                              <td>0.56</td>
+                              <td>0.38</td>
+                              <td>0.15</td>
+                            </tr>
+                            <tr>
+                              <th>22</th>
+                              <td>Mexico</td>
+                              <td>23</td>
+                              <td>6.60</td>
+                              <td>1.07</td>
+                              <td>1.32</td>
+                              <td>0.86</td>
+                              <td>0.43</td>
+                              <td>0.07</td>
+                              <td>0.07</td>
+                            </tr>
+                            <tr>
+                              <th>23</th>
+                              <td>France</td>
+                              <td>24</td>
+                              <td>6.59</td>
+                              <td>1.32</td>
+                              <td>1.47</td>
+                              <td>1.04</td>
+                              <td>0.44</td>
+                              <td>0.11</td>
+                              <td>0.18</td>
+                            </tr>
+                            <tr>
+                              <th>24</th>
+                              <td>Taiwan</td>
+                              <td>25</td>
+                              <td>6.45</td>
+                              <td>1.37</td>
+                              <td>1.43</td>
+                              <td>0.91</td>
+                              <td>0.35</td>
+                              <td>0.24</td>
+                              <td>0.10</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="cell border-box-sizing code_cell rendered">
+              <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[24]:</div>
+                <div class="inner_cell">
+                  <div class="input_area">
+                    <div class=" highlight hl-ipython3">
+                      <pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;countries.geo.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+          <span class="n">features</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)[</span><span class="s2">&quot;features&quot;</span><span class="p">]</span>
+          <span class="k">for</span> <span class="n">foo</span> <span class="ow">in</span> <span class="n">features</span><span class="p">:</span>
+              <span class="k">try</span><span class="p">:</span>
+                  <span class="n">name</span> <span class="o">=</span> <span class="n">foo</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+                  <span class="n">happydata</span> <span class="o">=</span> <span class="n">happiness</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">happiness</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">name</span><span class="p">,</span> <span class="p">:]</span>
+                  <span class="n">happydict</span> <span class="o">=</span> <span class="n">happydata</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">orient</span> <span class="o">=</span> <span class="s1">&#39;records&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                  <span class="n">foo</span><span class="p">[</span><span class="s2">&quot;properties&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">happydict</span>
+                  <span class="n">worldgeojson</span><span class="p">[</span><span class="s2">&quot;features&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+              <span class="k">except</span><span class="p">:</span>
+                  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;An error occured for name #: </span><span class="si">{name}</span><span class="s1">&#39;</span><span class="p">)</span>
+                  
+      </pre>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="output_wrapper">
+                <div class="output">
+
+
+                  <div class="output_area">
+
+                    <div class="prompt"></div>
+
+
+                    <div class="output_subarea output_stream output_stdout output_text">
+                      <pre>An error occured for name #: Angola
+      An error occured for name #: Antarctica
+      An error occured for name #: French Southern and Antarctic Lands
+      An error occured for name #: The Bahamas
+      An error occured for name #: Belize
+      An error occured for name #: Bermuda
+      An error occured for name #: Brunei
+      An error occured for name #: Democratic Republic of the Congo
+      An error occured for name #: Republic of the Congo
+      An error occured for name #: Cuba
+      An error occured for name #: Djibouti
+      An error occured for name #: Eritrea
+      An error occured for name #: Fiji
+      An error occured for name #: Falkland Islands
+      An error occured for name #: Guinea Bissau
+      An error occured for name #: Equatorial Guinea
+      An error occured for name #: Greenland
+      An error occured for name #: French Guiana
+      An error occured for name #: Guyana
+      An error occured for name #: Macedonia
+      An error occured for name #: New Caledonia
+      An error occured for name #: Oman
+      An error occured for name #: Papua New Guinea
+      An error occured for name #: Puerto Rico
+      An error occured for name #: North Korea
+      An error occured for name #: Western Sahara
+      An error occured for name #: Sudan
+      An error occured for name #: Solomon Islands
+      An error occured for name #: Somaliland
+      An error occured for name #: Republic of Serbia
+      An error occured for name #: Suriname
+      An error occured for name #: East Timor
+      An error occured for name #: Trinidad and Tobago
+      An error occured for name #: United Republic of Tanzania
+      An error occured for name #: Vanuatu
+      An error occured for name #: West Bank
+      </pre>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="cell border-box-sizing code_cell rendered">
+              <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[25]:</div>
+                <div class="inner_cell">
+                  <div class="input_area">
+                    <div class=" highlight hl-ipython3">
+                      <pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+      </pre>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="output_wrapper">
+                <div class="output">
+
+
+                  <div class="output_area">
+
+                    <div class="prompt"></div>
+
+
+                    <div class="output_subarea output_stream output_stdout output_text">
+                      <pre>{&#39;type&#39;: &#39;Feature&#39;, &#39;id&#39;: &#39;ZWE&#39;, &#39;properties&#39;: {&#39;country&#39;: &#39;Zimbabwe&#39;, &#39;happiness_rank&#39;: 146, &#39;happiness_score&#39;: 3.66, &#39;gdp_per_capita&#39;: 0.37, &#39;social_support&#39;: 1.11, &#39;life_expectancy&#39;: 0.43, &#39;freedom&#39;: 0.36, &#39;generosity&#39;: 0.15, &#39;government_corr&#39;: 0.09}, &#39;geometry&#39;: {&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[31.191409, -22.25151], [30.659865, -22.151567], [30.322883, -22.271612], [29.839037, -22.102216], [29.432188, -22.091313], [28.794656, -21.639454], [28.02137, -21.485975], [27.727228, -20.851802], [27.724747, -20.499059], [27.296505, -20.39152], [26.164791, -19.293086], [25.850391, -18.714413], [25.649163, -18.536026], [25.264226, -17.73654], [26.381935, -17.846042], [26.706773, -17.961229], [27.044427, -17.938026], [27.598243, -17.290831], [28.467906, -16.4684], [28.825869, -16.389749], [28.947463, -16.043051], [29.516834, -15.644678], [30.274256, -15.507787], [30.338955, -15.880839], [31.173064, -15.860944], [31.636498, -16.07199], [31.852041, -16.319417], [32.328239, -16.392074], [32.847639, -16.713398], [32.849861, -17.979057], [32.654886, -18.67209], [32.611994, -19.419383], [32.772708, -19.715592], [32.659743, -20.30429], [32.508693, -20.395292], [32.244988, -21.116489], [31.191409, -22.25151]]]}}
+      </pre>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="cell border-box-sizing code_cell rendered">
+              <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[26]:</div>
+                <div class="inner_cell">
+                  <div class="input_area">
+                    <div class=" highlight hl-ipython3">
+                      <pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;countries.geo.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+          <span class="n">geojson</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">worldgeojson</span><span class="p">,</span> <span class="n">fp</span><span class="p">)</span>
+      </pre>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </li>
+    </ol>
+
+  </div>
+  <div class="container">
+    <a href="#"><img class="img-fluid rounded mb-4" src="Geo1.PNG" alt=""></a>
+    <a href="#"><img class="img-fluid rounded mb-4" src="Geo2.PNG" alt=""></a>
+    <a href="#"><img class="img-fluid rounded mb-4" src="Geo3.PNG" alt=""></a>
+    <a href="#"><img class="img-fluid rounded mb-4" src="js1.PNG" alt=""></a>
+    <a href="#"><img class="img-fluid rounded mb-4" src="js2.PNG" alt=""></a>
+
+  </div>
+
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white"> <b>Budget Matter 2020 </b> <a
+          href="https://github.com/budgetmatter/budgetmatter.github.io" target="_blank">
+          <img width="20px"
+            src="data:image/png;base64,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">
+        </a></p>
+
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script type="text/javascript" src="static/js/config.js"></script>
+  <script type="text/javascript" src="static/js/logic.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
