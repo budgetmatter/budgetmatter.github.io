@@ -163,9 +163,9 @@
         </b><br>Formula used in “Model” to make adjustments on FTE changes based on the user input on “internal fund
         decision tool for pay and non-pay”.
       </li>
-      <li class="list-group-item"><b>4: " =
-          IFERROR(SUMIFS(Worksheet!$F:$F,Worksheet!$D:$D,Model!B24,Worksheet!E:E,Model!$A$10),0) "
-        </b><br>Formula used in “Model” to pull selected data in the section of “Allocation and Execution Scenarios”
+      <li class="list-group-item"><b>4: "=IFERROR(SUMIFS(Worksheet!$F:$F,
+          Worksheet!$D:$D,Model!B24,Worksheet!E:E, Model!$A$10),0) "</b><br>Formula used
+        in “Model” to pull selected data in the section of “Allocation and Execution Scenarios”
       </li>
     </ul>
     <br>
@@ -174,9 +174,8 @@
     <p style="font-size:larger;"> Formula used in “Worksheet” to retrieve the monthly data based on the user
       selection on “Allocation”, “Pay”, and “Non-Pay” dropdown menu.</p>
     <ul class="list-group">
-      <li class="list-group-item"><b>1. "
-          =SUMIFS(Allocation!I:I,Allocation!D:D,Worksheet!D11,Allocation!E:E,Worksheet!E11,Allocation!B:B,Worksheet!B11)
-          "</b>
+      <li class="list-group-item"><b>1. "=SUMIFS(Allocation!I:I, Allocation!D:D, Worksheet!D11,Allocation!E:E,
+          Worksheet!E11, Allocation!B:B, Worksheet!B11) "</b>
       </li>
       <li class="list-group-item"><b>2. " = VLOOKUP(D26,'Non-Pay Model'!$C:$P,MATCH(Worksheet!E26,'Non-Pay
           Model'!$C$1:$P$1,0),0) "</b>
