@@ -121,6 +121,11 @@
       plans must accompany all apportionment and reapportionment requests to OMB. </p>
     <p style="font-size:larger;"> Below excel-based scenario-driven self-balance spend plan model is a tool to plan and
       monitor budget before and during the year of the execution.</p>
+    <p style="font-size:larger;"> <b>Chart 1: Federal Budget Operate Plan Model Demonstration </b></p>
+    <a href="#"><img class="img-fluid rounded mb-4" src="spenddemo.gif" alt=""></a>
+    <p style="font-size:larger;"> <b>Chart 2: Federal Budget Operate Plan Model Process Map </b></p>
+    <a href="#"><img class="img-fluid rounded mb-4" src="project7 Process.PNG" alt=""></a>
+        <p style="font-size:larger;"> <b>Federal Budget Operate Plan TAB "Model" Detail Description by Section</b> </p>
     <ul class="list-group">
       <li class="list-group-item">1. The scenarios based allocation and execution combinations can produce over 300
         outcomes, with pre-built 4 allocation options, 7 non-pay execution, and 11 pay execution scenarios.</li>
@@ -131,10 +136,89 @@
         number based on Department and Congress decision.</li>
       <li class="list-group-item">4. “The allocation and execution” provide detail information on execution outcome
         based on option selection, internal fund decision, and external adjustment.</li>
-      <li class="list-group-item">5. The visualization allow users to gain clear understanding with each scenario outcome.</li>
+      <li class="list-group-item">5. The visualization allow users to gain clear understanding with each scenario
+        outcome.</li>
     </ul>
     <br>
-    <a href="#"><img class="img-fluid rounded mb-4" src="spendplan.gif" alt=""></a>
+    <p style="font-size:larger;"> <b>Chart 3: Federal Budget Operate Plan Model TAB "Model" Section Description </b></p>
+    <ul class="list-group">
+      <li class="list-group-item"> <a href="#"><img class="img-fluid rounded mb-4" src="project7-paysection.PNG"
+            alt=""></a>
+    </ul>
+    <br>
+    <p style="font-size:larger;"> <b>Federal Budget Operate Plan TAB "Model" Selected Excel Formulas and Functions</b> </p>
+    <ul class="list-group">
+      <li class="list-group-item"><b>1: " = IFERROR(VLOOKUP(A10,Factor!AG:AH,2,0),“oops ") "</b><br>Formula used in
+        “Model” to
+        generate scenarios description based on user selection from
+        dropdown menu in the section of “Budget Simulation Scenarios”.</li>
+      <li class="list-group-item"><b>2: " = -IF(H6="Use N-Pay",(I6-B21)*B20,0)-IF(H7="Use
+          N-Pay",I7*G21,0)+I14 "</b><br>Formula used in “Model” to make adjustments on revised baseline based on the
+        user
+        input on “Fund Source” of pay and non-pay and “Amount” on “internal fund decision tool for Pay and for Non-Pay”
+      </li>
+      <li class="list-group-item"><b>3: " = IF(H6="Absorbed in Pay",-(I6-B21)*B20/G21,0)+IF(H7="Use
+          N-Pay",I7,0)-I14/G21+D20 "
+        </b><br>Formula used in “Model” to make adjustments on FTE changes based on the user input on “internal fund
+        decision tool for pay and non-pay”.
+      </li>
+      <li class="list-group-item"><b>4: " =
+          IFERROR(SUMIFS(Worksheet!$F:$F,Worksheet!$D:$D,Model!B24,Worksheet!E:E,Model!$A$10),0) "
+        </b><br>Formula used in “Model” to pull selected data in the section of “Allocation and Execution Scenarios”
+      </li>
+    </ul>
+    <br>
+    <p style="font-size:larger;"> <b>Federal Budget Operate Plan TAB "Worksheet" Selected Excel Formulas and Functions</b> </p>
+    <p style="font-size:larger;"> Formula used in “Worksheet” to retrieve the monthly data based on the user
+      selection on “Allocation”, “Pay”, and “Non-Pay” dropdown menu.</p>
+    <ul class="list-group">
+      <li class="list-group-item">1. "
+        =SUMIFS(Allocation!I:I,Allocation!D:D,Worksheet!D11,Allocation!E:E,Worksheet!E11,Allocation!B:B,Worksheet!B11) "
+      </li>
+      <li class="list-group-item">2. " = VLOOKUP(D26,'Non-Pay Model'!$C:$P,MATCH(Worksheet!E26,'Non-Pay
+        Model'!$C$1:$P$1,0),0) "
+      </li>
+      <li class="list-group-item">3. " = VLOOKUP(D38,'Pay Model'!$A$91:$P$103,MATCH(Worksheet!E38,'Pay
+        Model'!$A$91:$P$91,0),0) "</li>
+    </ul>
+    <br>
+
+    <p style="font-size:larger;"> <b>Federal Budget Operate Plan TAB "Non-Pay Model" Selected Excel Formulas and Functions</b> </p>
+    <p style="font-size:larger;"> Use “IF” and “VLOOKUP” combinations to fill out the execution and plan data, if
+      “VLOOKUP” has positive return from execution data report, then the monthly data field will contain actual
+      execution data, otherwise, it will show plan data. </p>
+    <ul class="list-group">
+      <li class="list-group-item"><b>1.
+          " = IF(VLOOKUP(C5,'Actual WS'!A:B,2,0)>0,VLOOKUP(C5,'Actual WS'!A:B,2,0),O5) "</b>
+      </li>
+    </ul>
+    <br>
+    <p style="font-size:larger;"> <b>Federal Budget Operate Plan TAB "Pay Model" Selected Excel Formulas and Functions</b> </p>
+    <p style="font-size:larger;"> To calculate FTE QTR distribution by consider the working days by QTR and the FTE equivalent of the End Strength.</p>
+    <ul class="list-group">
+      <li class="list-group-item"><b>1.
+          " = BU!$B$4/(($D$2/$C$2)+($D$3/$C$3)*(H$3/H$2)+($D$4/$C$4)*(H$4/H$2)+($D$5/$C$5)*(H$5/H$2)) "</b>
+          <br>    <a href="#"><img class="img-fluid rounded mb-4" src="project7-paymodelcalcu.png"
+            alt=""></a>
+      </li>
+    </ul>
+    <br>
+
+      <p style="font-size:larger;"> <b>Chart 4: Federal Budget Operate Plan TAB "Pay Model"</b> </p>
+      <ul class="list-group">
+        <li class="list-group-item">    <a href="#"><img class="img-fluid rounded mb-4" src="project7-paymodel.png"
+          alt=""></a>
+        </li>
+      </ul>
+      <br>
+      <p style="font-size:larger;"> <b>Chart 5: Federal Budget Operate Plan TAB "Pay Weight" </b> </p>
+      <ul class="list-group">
+        <li class="list-group-item">    <a href="#"><img class="img-fluid rounded mb-4" src="project7-payweight.png"
+          alt=""></a>
+        </li>
+      </ul>
+      <br>
+  
     <p style="font-size:larger;"> Budget Allocation Scenarios:</p>
     <ul class="list-group">
       <li class="list-group-item">1. ALLT-A- 1:1:1:1 - Typical OMB allocation: 25% per QTR.</li>
